@@ -10,9 +10,6 @@ public class NewtonGravityController : MonoBehaviour {
     private Rigidbody rigid;
     public Vector3 initialVelocity;
     public GameObject[] attractors;
-    
-    void Awake() {
-    }
 
     void Start() {
         rigid = GetComponent<Rigidbody>();
@@ -38,9 +35,7 @@ public class NewtonGravityController : MonoBehaviour {
 	public Vector3 lastAppliedForce;
 
 	void OnDrawGizmos() {
-
 		Gizmos.DrawLine(transform.position, transform.position+4*lastAppliedForce);
-		
 	}
 
 }
