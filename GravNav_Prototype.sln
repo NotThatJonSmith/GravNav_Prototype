@@ -1,7 +1,7 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{E0E1A979-504C-C4CC-D9C0-65FDC7D98FBA}") = "GravNav_Prototype", "Assembly-CSharp.csproj", "{2C8A56D0-A95F-29D1-D7FC-FBB14F31E8AB}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GravNav_Prototype.CSharp", "GravNav_Prototype.CSharp.csproj", "{37681BE1-1218-754D-9CA0-96AE51417D12}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2C8A56D0-A95F-29D1-D7FC-FBB14F31E8AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C8A56D0-A95F-29D1-D7FC-FBB14F31E8AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2C8A56D0-A95F-29D1-D7FC-FBB14F31E8AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2C8A56D0-A95F-29D1-D7FC-FBB14F31E8AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37681BE1-1218-754D-9CA0-96AE51417D12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37681BE1-1218-754D-9CA0-96AE51417D12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37681BE1-1218-754D-9CA0-96AE51417D12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37681BE1-1218-754D-9CA0-96AE51417D12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal

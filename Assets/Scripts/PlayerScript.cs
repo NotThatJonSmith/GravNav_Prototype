@@ -6,8 +6,9 @@ public class PlayerScript : MonoBehaviour {
 
     public static GameObject S;
     public List<GameObject> planets;
+    public int pickups = 0;
 
-	// Use this for initialization
+    // Use this for initialization
     void Awake()
     {
         if (S)
@@ -20,8 +21,8 @@ public class PlayerScript : MonoBehaviour {
 
 	void Start ()
     {
-
-	}
+        S = gameObject;
+    }
 	
 	// Update is called once per frame
 	void Update () {
