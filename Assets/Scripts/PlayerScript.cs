@@ -5,26 +5,38 @@ using System.Collections.Generic;
 public class PlayerScript : MonoBehaviour {
 
     public static GameObject S;
-    public List<GameObject> planets;
+	private Rigidbody rigid;
+	public Vector3 initialVelocity;
+	public PlanetScript[] attractors;
+	public Vector3 lastAppliedForce;
 
-	// Use this for initialization
-    void Awake()
-    {
-        if (S)
-        {
-            Debug.Log("Multiple players. Error.");
-            return;
-        }
-        S = gameObject;
-    }
-
-	void Start ()
-    {
-
+	void Start() {
+		rigid = GetComponent<Rigidbody>();
+		if (rigid == null) print("Error! No Rigidbody component on Player");
+		rigid.velocity = initialVelocity;
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void Awake() {
+		if (S) {
+			Debug.Log("Multiple players. Error.");
+			return;
+		}
+		S = gameObject;
+	}
+	
+	void FixedUpdate() {
+		foreach (PlanetScript ps in attractors) {
+			lastAppliedForce = gravity(ps);
+			rigid.AddForce(lastAppliedForce);
+		}
+	}
+	
+	Vector3 gravity(PlanetScript ps) {
+		Vector3 displacement = ps.gameObject.transform.position - transform.position;
+		return displacement.normalized * ps.strengthOfAttraction / Mathf.Pow(displacement.magnitude, 2);
+	}
 
-    }
+	void OnDrawGizmos() {
+		Gizmos.DrawLine(transform.position, transform.position + 4 * lastAppliedForce);
+	}
 }
